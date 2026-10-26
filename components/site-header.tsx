@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Compass, Users } from 'lucide-react'
+import { NavLinks } from '@/components/nav-links'
 
 export function SiteHeader() {
   return (
@@ -14,12 +15,7 @@ export function SiteHeader() {
           </span>
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-8 text-sm font-medium sm:flex">
-          <Link href="/trips" className="text-muted-foreground transition-colors hover:text-primary">
-            My trips
-          </Link>
-          <Link href="/trips/new" className="text-accent transition-colors hover:text-primary">
-            Plan a trip
-          </Link>
+          <NavLinks />
         </nav>
         <Link
           href="/join"
@@ -30,12 +26,7 @@ export function SiteHeader() {
         </Link>
       </div>
       <nav aria-label="Mobile" className="flex gap-6 border-t border-border px-4 py-2 text-sm sm:hidden">
-        <Link href="/trips" className="text-muted-foreground">
-          My trips
-        </Link>
-        <Link href="/trips/new" className="text-accent">
-          Plan a trip
-        </Link>
+        <NavLinks />
       </nav>
     </header>
   )
